@@ -1,0 +1,280 @@
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+ 
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    border: 0px;
+  
+}
+
+header{
+    height: 20%;
+    width: 100%;
+    position: fixed;
+
+}
+nav{
+    height: 100%;
+    width: 100%;
+    background-color: #2F1048;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   
+  
+}
+
+a{
+    max-width: 10%;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 13px;
+}
+
+a:hover{
+    color: #b76ef3;
+}
+
+
+nav img{
+    width: 3%;
+    margin: 20px;
+    border-radius: 50%;
+    border: solid 1px  rgb(0, 0, 0);
+
+    
+}
+
+.logo img{
+    width: 70%;
+    height: 100%;
+    border-radius: 50%;
+    border: none;
+   
+}
+
+
+a img{
+    width: 35%;
+    height: 100%;
+    
+}
+
+a h3{
+    position: relative;
+    left: -27px;
+    top: -30px;
+    color: aqua;
+    font-weight: 800;
+}
+
+form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    width: 300px;
+    height: 30%;
+    cursor: pointer;
+    background-color: white;
+    
+}
+
+form input{
+  width: 250px;
+  height: 100%;
+  border-radius: 20px  0px 0px 20px;
+  border: none;
+  text-align: center;
+}
+
+
+
+form img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 90%;
+    border: none;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #6200ea;
+    outline: none;
+    background-color: #f3f3f3;
+    color: #6c068b; 
+   
+}
+
+.hidden {
+    display: none;
+}
+
+.hamburguesa, .close{
+   display: none;
+}
+.nocturno, .carrito-compras{
+    cursor: pointer;
+}
+
+.cuerpo-nocturno{
+    transition: ease-in-out .6s;
+    background-color: black;
+    color: white;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.productos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    height: 60vh;
+    flex-wrap: wrap;
+}
+
+.producto{
+    height: 700px;
+    width: 300px;
+    margin: 50px;
+    
+}
+
+.producto img{
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+
+.info{
+    height: 30%;
+}
+.producto .descuento{
+
+
+    padding: 5px;
+    background-color: orange;
+
+    font-weight: 900;
+}
+
+.producto h3{
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.antes{
+    color: red;
+}
+
+.producto button{
+    font-weight: 800;
+    font-style: normal;
+    font-size: 15px;
+    background-color: orange;
+    color: black;
+    border: none;
+    padding: 5px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+.producto button:hover{
+    transition: .5s;
+    background-color: rgb(161, 118, 36);
+    color: white;
+}
+
+@media (max-width: 900px) {
+    nav{
+        padding-left: 5%;
+        height: 15vh;
+       
+    }
+    form{
+        order: 0;
+        width: 60%;
+      display: flex;
+      justify-content: space-around;
+
+       
+
+    }
+    a{
+        order: 1;
+        width: 20%;
+        height: 40%;
+    }
+    .carrito-compras img{
+        width: 100%;
+    }
+
+    .hamburguesa{
+        order: 2;
+      display: flex;
+        height: 40%;
+        width: 8%;
+        outline: 10px;
+        cursor: pointer;
+    }
+
+
+    .hamburguesa:hover{
+        border: #6200ea;
+    }
+
+    .close{
+        position: relative;
+        top: -30px;
+        width: 9%;
+        border: none;
+    }
+    .close:hover{
+        box-shadow: 5px 5px 10px rgba(226, 205, 228, 0.3); 
+        cursor: pointer;
+    }
+    
+    .desplegar{
+        transition: all ease-in-out .9s;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        padding-left: 0px;
+
+
+    }
+
+    .desplegar a{ 
+       display: flex;
+       text-align: center;
+       width: 100%; 
+       height: 100%;
+       font-size: 18px;
+       align-items: stretch;
+    }
+
+    .desplegar form, .desplegar .carrito-compras, .desplegar .logo, .desplegar img{
+       display: none;
+    }
+
+
+}
